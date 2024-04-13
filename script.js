@@ -9,7 +9,6 @@ function calculate(ev) {
     const sgpaValues = Array.from(semInputs, input => Number(input.value));
     let totalsgpa = 0;
     let n = 0;
-    let error = false;
     let percentage = 0;
     let cgpa = 0;
     sgpaValues.forEach((value, index) => {
@@ -17,22 +16,16 @@ function calculate(ev) {
             totalsgpa+=value;
             n+=1;
         } else if (value >10){
-            error = true;
+            alert(`Value of Sem${index+1} exceeded!`)
         }
     })
-    if(error===true){
-        console.log("Sgpa should be atmost 10.")
-    } else {
-        cgpa = (totalsgpa/n).toFixed(2);
-        percentage = (7.25*cgpa)+11;
-        CGPA.textContent ="CGPA : " + cgpa;
-        Percentage.textContent = "Percentage : " + percentage;
-        let res;
-        res= (cgpa>=7.5 ? "Excellent grades!" : "Can do Better!");
-        Result.textContent = res;
-
-    }
-    
+    cgpa = (totalsgpa/n).toFixed(2);
+    percentage = (7.25*cgpa)+11;
+    CGPA.textContent ="CGPA : " + cgpa;
+    Percentage.textContent = "Percentage : " + percentage;
+    let res;
+    res= (cgpa>=7.5 ? "Excellent grades!" : "Can do Better!");
+    Result.textContent = res;
 }
 
 

@@ -71,6 +71,9 @@ h4{
     font-family: Verdana, Tahoma, sans-serif;
     font-weight: 400;
 }
+.wrong {
+    border: 2px solid red;
+}
 footer {
     position: absolute;
     bottom: 0px;
