@@ -24,7 +24,7 @@ function calculate(ev) {
     CGPA.textContent ="CGPA : " + cgpa;
     Percentage.textContent = "Percentage : " + percentage;
     let res;
-    res= (cgpa>=7.5 ? "Excellent grades!" : "Can do Better!");
+    res= (cgpa>=7.5 ? "Excellent grades!" : "You Can do Better!");
     Result.textContent = res;
 }
 
